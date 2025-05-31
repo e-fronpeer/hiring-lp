@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eフロンピア合同会社 | アプリケーションエンジニア採用 - 共に拓く、いいフロンティア</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #333;
+        }
+        .hero-section {
+            background: url('./images/clark_statue.jpg') no-repeat center top;
+            background-size: cover;
+            color: white;
+        }
+        @media (min-width: 768px) {
+            .hero-section {
+                background-position: center 0;
+                background-size: 100% auto;
+            }
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        .section-title:after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #0066CC;
+        }
+        .card {
+            transition: all 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .tech-badge {
+            display: inline-block;
+            padding: 0.35rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .contribution-chart {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .contribution-chart-circle {
+            fill: none;
+            stroke-width: 10;
+            stroke-linecap: round;
+            transform: rotate(-90deg);
+            transform-origin: center;
+        }
+        .contribution-chart-bg {
+            stroke: #e6e6e6;
+        }
+        .contribution-chart-fill {
+            stroke: #0066CC;
+            stroke-dasharray: 565.48;
+            stroke-dashoffset: 543.86;
+        }
+        .ezologo {
+            font-weight: bold;
+            background: linear-gradient(90deg, #0066CC 0%, #004C99 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-6 md:py-8">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <h1 class="text-2xl md:text-3xl font-bold text-blue-700">Eフロンピア<span class="text-gray-500 text-xl md:text-2xl">合同会社</span></h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section py-20 md:py-32 relative">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-2xl">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-left">共に拓く、<br>いいフロンティア</h2>
+                <p class="text-xl md:text-2xl mb-4 text-left">北海道と岩手から世界へ</p>
+                <div class="mt-8 text-left">
+                    <a href="#recruitment" class="bg-white text-blue-700 font-bold py-3 px-6 rounded-full shadow-lg hover:bg-blue-50 transition duration-300">
+                        エンジニア採用情報
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Introduction -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center section-title">会社紹介</h2>
+            
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">社名の由来</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Eフロンピアという社名には3つの想いが込められています。「いいフロンティア」と「仲間（peer）」の融合、そして北海道の古称「蝦夷（Ezo）」の「E」。また、11月26日の創業日は「いい風呂の日」にちなんでおり、心地よい価値を生み出したいという願いが込められています。
+                    </p>
+                    <div class="flex flex-wrap justify-center md:justify-start">
+                        <div class="bg-blue-50 p-4 rounded-lg m-2 text-center w-40">
+                            <span class="block text-blue-700 font-bold">いいフロンティア</span>
+                            <span class="text-sm text-gray-500">新しい価値の創造</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg m-2 text-center w-40">
+                            <span class="block text-blue-700 font-bold">仲間（peer）</span>
+                            <span class="text-sm text-gray-500">共に成長する仲間</span>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg m-2 text-center w-40">
+                            <span class="block text-blue-700 font-bold">蝦夷（Ezo）</span>
+                            <span class="text-sm text-gray-500">北海道への思い</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex items-center justify-center">
+                    <div class="p-8 bg-blue-50 rounded-lg shadow-sm max-w-md">
+                        <div class="flex items-center mb-6">
+                            <div class="mr-4 text-4xl text-blue-700">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div>
+                                <p class="text-lg italic text-gray-700">北海道から世界へ、テクノロジーの力で新たな価値を創造します。場所を選ばない働き方と最先端の技術を組み合わせ、エンジニアの可能性を広げる企業を目指しています。</p>
+                                <p class="mt-4 font-bold">樋口 修也 / 代表</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center section-title">サービス内容</h2>
+            
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- AI Application Development -->
+                <div class="bg-white p-6 rounded-lg shadow-md card">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-700 mr-4">
+                            <i class="fas fa-robot text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">AIアプリケーション開発</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        AIエンジニアの開発したコードと連携するアプリケーションの開発
+                    </p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <span>メインクライアント：東京のAIスタートアップ企業</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <span>RAGとOpenAI APIを利用したAIシステム構築実績あり</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Marketing Tool -->
+                <div class="bg-white p-6 rounded-lg shadow-md card">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-700 mr-4">
+                            <i class="fas fa-chart-line text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">マーケティングツール構築</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        LookerStudioを活用した専用マーケティングツール
+                    </p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <span>Pythonによる機械学習を活用したバスケット分析</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <span>海外向け分析ツール：delibali社と協業</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Software Development -->
+                <div class="bg-white p-6 rounded-lg shadow-md card">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-700 mr-4">
+                            <i class="fas fa-laptop-code text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">ソフトウェア開発</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        ホームページから業務ツールまで幅広く対応
+                    </p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <span>Webアプリケーション開発（フロント・バックエンド）</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <span>AWS・GCPなどクラウドサーバーを活用</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <span>HP制作実績：金澤電気など</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Programming Education -->
+                <div class="bg-white p-6 rounded-lg shadow-md card">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-700 mr-4">
+                            <i class="fas fa-chalkboard-teacher text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">プログラミング教育</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        プログラミングプラットフォームMentaを通じた教育サービス
+                    </p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <span>3年間で50名以上を指導した実績</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <span>未経験者から経験者まで幅広く対応</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <span>企業向けプログラミング研修も実施</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Technology Stack -->
+    <section id="tech" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center section-title">技術スタック</h2>
+            
+            <div class="mt-12 text-center">
+                <p class="text-gray-600 mb-8">よく利用する技術スタック</p>
+                
+                <div class="flex flex-wrap justify-center">
+                    <span class="tech-badge bg-blue-100 text-blue-800">Next.js</span>
+                    <span class="tech-badge bg-green-100 text-green-800">Django</span>
+                    <span class="tech-badge bg-red-100 text-red-800">FastAPI</span>
+                    <span class="tech-badge bg-pink-100 text-pink-800">Ruby on Rails</span>
+                    <span class="tech-badge bg-yellow-100 text-yellow-800">AWS</span>
+                    <span class="tech-badge bg-indigo-100 text-indigo-800">GCP</span>
+                </div>
+                
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-6 bg-gray-50 rounded-lg">
+                        <div class="text-3xl mb-4 text-blue-600">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">フロントエンド</h3>
+                        <p class="text-gray-600">
+                            React, Vue.js, TypeScript, HTML/CSS, Next.js
+                        </p>
+                    </div>
+                    
+                    <div class="p-6 bg-gray-50 rounded-lg">
+                        <div class="text-3xl mb-4 text-blue-600">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">バックエンド</h3>
+                        <p class="text-gray-600">
+                            Python, Django, FastAPI, Ruby on Rails, Node.js
+                        </p>
+                    </div>
+                    
+                    <div class="p-6 bg-gray-50 rounded-lg">
+                        <div class="text-3xl mb-4 text-blue-600">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">インフラ</h3>
+                        <p class="text-gray-600">
+                            AWS, GCP, Docker
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Contribution -->
+    <section id="contribution" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center section-title">社会貢献活動</h2>
+            
+            <div class="mt-12">
+                <div class="flex flex-col md:flex-row items-center mb-12">
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <h3 class="text-2xl font-bold mb-4 flex items-center">
+                            <i class="fas fa-heart text-red-500 mr-3"></i>
+                            故郷への恩返しプロジェクト
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            創業からわずか半年ではございますが、理念に基づき、売上の一部をメンバーの出身地である北海道と岩手に還元する仕組みを設けました。
+                        </p>
+                        
+                        <div class="mt-6">
+                            <div class="bg-blue-50 p-6 rounded-lg shadow-sm mb-6">
+                                <h4 class="text-xl font-bold mb-4 text-blue-700">売上の1〜2%を故郷へ還元</h4>
+                                <p class="text-gray-700 mb-4">
+                                    私たちは、事業を通じて得られた売上の1〜2%を、イベントスポンサーや寄付を通じて故郷である北海道と岩手県に還元しています。これは単なる社会貢献ではなく、私たちの創業の理念に基づく重要な取り組みです。
+                                </p>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="bg-white p-4 rounded-lg">
+                                        <h5 class="font-bold mb-2 text-blue-600">北海道への貢献</h5>
+                                        <ul class="text-gray-600 space-y-2">
+                                            <li class="flex items-start">
+                                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                                <span>地域の子ども食堂支援</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                                <span>ITカンファレンス等への寄付</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                                <span>大学との教育連携計画</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-white p-4 rounded-lg">
+                                        <h5 class="font-bold mb-2 text-green-600">岩手県への貢献</h5>
+                                        <ul class="text-gray-600 space-y-2">
+                                            <li class="flex items-start">
+                                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                                <span>岩手大学との教育連携計画</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                                <span>地域の子ども食堂支援</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="w-full md:w-1/2 md:pl-12">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-white p-5 rounded-lg shadow-sm">
+                                <h4 class="text-lg font-bold mb-3 flex items-center">
+                                    <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i>
+                                    地域貢献の仕組み
+                                </h4>
+                                <p class="text-gray-600 text-sm">
+                                    売上の1〜2%をイベントスポンサーや寄付を通じて故郷へ還元
+                                </p>
+                            </div>
+                            
+                            <div class="bg-white p-5 rounded-lg shadow-sm">
+                                <h4 class="text-lg font-bold mb-3 flex items-center">
+                                    <i class="fas fa-utensils text-blue-500 mr-2"></i>
+                                    子ども食堂への支援
+                                </h4>
+                                <p class="text-gray-600 text-sm">
+                                    子どもたちの未来を応援
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                            <div class="bg-blue-50 p-5 rounded-lg">
+                                <h4 class="text-lg font-bold mb-3">北海道への貢献</h4>
+                                <ul class="text-gray-600 text-sm space-y-2">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-blue-500 text-xs mt-1 mr-2"></i>
+                                        <span>地元の子ども食堂支援</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-blue-500 text-xs mt-1 mr-2"></i>
+                                        <span>ITカンファレンス等への寄付</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-blue-500 text-xs mt-1 mr-2"></i>
+                                        <span>大学との教育連携</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-green-50 p-5 rounded-lg">
+                                <h4 class="text-lg font-bold mb-3">岩手県への貢献</h4>
+                                <ul class="text-gray-600 text-sm space-y-2">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-green-500 text-xs mt-1 mr-2"></i>
+                                        <span>岩手大学との教育連携計画</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-green-500 text-xs mt-1 mr-2"></i>
+                                        <span>地域の子ども食堂支援</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Introduction -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center section-title">創業者紹介</h2>
+            
+            <div class="mt-12 flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/3 mb-8 md:mb-0">
+                    <img src="./images/shuya_higuchi.png" alt="樋口修也" class="rounded-lg shadow-md mx-auto md:mx-0" style="max-width: 250px;">
+                </div>
+                
+                <div class="w-full md:w-2/3 md:pl-10">
+                    <h3 class="text-2xl font-bold mb-2">樋口 修也</h3>
+                    <p class="text-blue-700 font-medium mb-2">Eフロンピア合同会社代表</p>
+                    
+                    <p class="text-gray-600 mb-6">
+                        単なる下請けの開発ではなく、顧客に提案のできる開発組織を目指しております。
+                    </p>
+                    
+                    <h4 class="font-bold mb-4">創業までの道のり</h4>
+                    
+                    <div class="space-y-4">
+                        <div class="flex">
+                            <div class="flex-shrink-0 w-32 text-sm font-medium">2019年 春</div>
+                            <div class="flex-grow text-gray-600">岩手大学卒業後に東京でIT企業に新卒入社</div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0 w-32 text-sm font-medium">2020年 秋</div>
+                            <div class="flex-grow text-gray-600">北海道の生協に転職しDX推進本部の立ち上げ期に参画。自身でAuth0を活用した認証基盤構築PJを主導。</div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0 w-32 text-sm font-medium">2021年 秋</div>
+                            <div class="flex-grow text-gray-600">プログラミング教育プラットフォームMentaで上位2.5%のメンターに送られるシルバーメダル獲得。</div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0 w-32 text-sm font-medium">2023年 秋</div>
+                            <div class="flex-grow text-gray-600">カナダのモントリオール市へ移住し英語学習をしながらフリーランスへ転身</div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0 w-32 text-sm font-medium">2024年 春</div>
+                            <div class="flex-grow text-gray-600">セールスAIを開発するスタートアップにフロント、バックエンド、インフラを担当するエンジニアとして参画</div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0 w-32 text-sm font-medium">2024年 秋</div>
+                            <div class="flex-grow text-gray-600">Eフロンピア合同会社を設立</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Online Community -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-10">オンライン交流会</h2>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                    <img src="./images/online_party.png" alt="オンライン交流会の様子" class="rounded-lg shadow-md mx-auto" style="max-width: 90%;">
+                </div>
+                
+                <div class="w-full md:w-1/2 md:pl-10">
+                    <h3 class="text-2xl font-bold mb-4">月に1度のオンライン交流会</h3>
+                    
+                    <p class="text-gray-600 mb-6">
+                        エンジニア同士のつながりを大切にし、月に1度のオンライン交流会を開催しています。技術情報の共有や、リモートワークならではの課題解決など、様々なトピックで意見交換を行っています。
+                    </p>
+                    
+                    <div class="bg-white p-5 rounded-lg shadow-sm mb-6">
+                        <h4 class="font-bold mb-2">交流会の特徴</h4>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>技術知識の共有と学び合い</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>リモートワークでのコミュニケーション促進</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>プロジェクトの進捗や課題の共有</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <p class="text-gray-600">
+                        フリーランスエンジニアとして参画いただいた方は、この交流会に参加いただけます。リモートだからこそ、つながりを大切にしています。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recruitment -->
+    <section id="recruitment" class="py-20 bg-blue-700 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">アプリケーションエンジニア募集</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <div class="bg-white text-gray-800 p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6 text-blue-700">募集概要</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-bold mb-2 flex items-center">
+                                    <i class="fas fa-laptop-code text-blue-500 mr-2"></i>
+                                    業務内容
+                                </h4>
+                                <p class="text-gray-600">
+                                    AIアプリケーション開発、Webシステム開発、業務効率化ツールの開発など。主に受託開発案件。
+                                </p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-bold mb-2 flex items-center">
+                                    <i class="fas fa-clock text-blue-500 mr-2"></i>
+                                    稼働時間・報酬
+                                </h4>
+                                <ul class="text-gray-600 space-y-2">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                        <span>月60〜160時間（案件により調整可能）</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                        <span>時間単価：1,500円〜4,500円（経験・スキルに応じて）</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-bold mb-2 flex items-center">
+                                    <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i>
+                                    勤務形態・場所
+                                </h4>
+                                <p class="text-gray-600">
+                                    完全リモート（オンライン会議ツールでのコミュニケーション）
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-white text-gray-800 p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6 text-blue-700">求めるスキル・経験</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-bold mb-2 flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    必須スキル
+                                </h4>
+                                <ul class="text-gray-600 space-y-2">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-blue-500 text-xs mt-1.5 mr-2"></i>
+                                        <span>1年以上のWeb開発経験</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-blue-500 text-xs mt-1.5 mr-2"></i>
+                                        <span>HTML/CSS/JavaScriptの基本的な理解</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-blue-500 text-xs mt-1.5 mr-2"></i>
+                                        <span>GitHubなどを使ったバージョン管理の経験</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-bold mb-2 flex items-center">
+                                    <i class="fas fa-plus text-blue-500 mr-2"></i>
+                                    歓迎スキル
+                                </h4>
+                                <ul class="text-gray-600 space-y-2">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-blue-500 text-xs mt-1.5 mr-2"></i>
+                                        <span>Next, React などのフレームワーク経験</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-blue-500 text-xs mt-1.5 mr-2"></i>
+                                        <span>Python, TypeScript などの言語経験</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-blue-500 text-xs mt-1.5 mr-2"></i>
+                                        <span>AWS、GCP などのクラウドサービス利用経験</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-blue-500 text-xs mt-1.5 mr-2"></i>
+                                        <span>要件定義の経験</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-bold mb-2 flex items-center">
+                                    <i class="fas fa-heart text-red-500 mr-2"></i>
+                                    求める人物像
+                                </h4>
+                                <p class="text-gray-600">
+                                    新しい技術に興味を持ち、主体的に学ぶ姿勢がある方。コミュニケーションを大切にし、チームでの開発を楽しめる方。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 text-center">
+                        <a href="#contact" class="inline-block bg-white text-blue-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-50 transition duration-300">
+                            話を聞く（お問い合わせフォームへ）
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 bg-blue-800 p-8 rounded-lg max-w-3xl mx-auto">
+                <h3 class="text-xl font-bold mb-4 flex items-center">
+                    <i class="fas fa-lightbulb text-yellow-400 mr-3"></i>
+                    フルリモートで働く魅力
+                </h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <span>場所にとらわれない自由な働き方</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <span>通勤時間のストレスから解放</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <span>自分のペースで仕事に集中できる環境</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <span>最新のAI技術に触れる機会</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <span>多彩なプロジェクトで経験を積める</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <span>定期的なオンライン交流会でつながりも維持</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center section-title">話を聞いてみる</h2>
+            
+            <div class="mt-2 max-w-2xl mx-auto text-left">
+                <p class="text-gray-600 mb-2">カジュアル面談を希望の方は以下のフォームに記載をお願いいたします。後ほど、担当のものより日程などの連絡をさせていただきます。</p>
+                <p class="text-gray-600 mb-2">※スキルセットや条件によっては連絡を見送らせていただく場合がございます。ご了承ください。</p>
+            </div>
+            
+            <div class="mt-6 max-w-2xl mx-auto">
+                <form id="recruitmentForm" class="space-y-6" onsubmit="return submitForm(event)">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">お名前 <span class="text-red-500">*</span></label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">メールアドレス <span class="text-red-500">*</span></label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    </div>
+
+                    <div>
+                        <label for="hours" class="block text-sm font-medium text-gray-700 mb-1">月で稼動可能な稼動時間は何時間ですか？ <span class="text-red-500">*</span></label>
+                        <select id="hours" name="hours" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            <option value="">選択してください</option>
+                            <option value="40-60">40〜60時間</option>
+                            <option value="60-80">60〜80時間</option>
+                            <option value="80-100">80〜100時間</option>
+                            <option value="100-120">100〜120時間</option>
+                            <option value="120-140">120〜140時間</option>
+                            <option value="140-160">140〜160時間</option>
+                            <option value="160+">160時間以上</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="nextjs" class="block text-sm font-medium text-gray-700 mb-1">Next.js,React.jsの開発経験はありますか？ <span class="text-red-500">*</span></label>
+                        <select id="nextjs" name="nextjs" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            <option value="">選択してください</option>
+                            <option value="none">経験はない</option>
+                            <option value="less-than-1">1年未満だが経験はある</option>
+                            <option value="1-3">1〜3年の経験がある</option>
+                            <option value="3-5">3〜5年の経験がある</option>
+                            <option value="5+">5年以上の経験がある</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="python" class="block text-sm font-medium text-gray-700 mb-1">FastAPIもしくはDjangoでの開発経験はありますか？ <span class="text-red-500">*</span></label>
+                        <select id="python" name="python" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            <option value="">選択してください</option>
+                            <option value="none">経験はない</option>
+                            <option value="less-than-1">1年未満だが経験はある</option>
+                            <option value="1-3">1〜3年の経験がある</option>
+                            <option value="3-5">3〜5年の経験がある</option>
+                            <option value="5+">5年以上の経験がある</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="frontend" class="block text-sm font-medium text-gray-700 mb-1">フロントエンドエンジニアとしての開発経験はありますか？ <span class="text-red-500">*</span></label>
+                        <select id="frontend" name="frontend" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            <option value="">選択してください</option>
+                            <option value="none">経験はない</option>
+                            <option value="less-than-1">1年未満だが経験はある</option>
+                            <option value="1-3">1〜3年の経験がある</option>
+                            <option value="3-5">3〜5年の経験がある</option>
+                            <option value="5+">5年以上の経験がある</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="backend" class="block text-sm font-medium text-gray-700 mb-1">バックエンドエンジニアとしての開発経験はありますか？ <span class="text-red-500">*</span></label>
+                        <select id="backend" name="backend" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            <option value="">選択してください</option>
+                            <option value="none">経験はない</option>
+                            <option value="less-than-1">1年未満だが経験はある</option>
+                            <option value="1-3">1〜3年の経験がある</option>
+                            <option value="3-5">3〜5年の経験がある</option>
+                            <option value="5+">5年以上の経験がある</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="design" class="block text-sm font-medium text-gray-700 mb-1">要件定義や設計の経験はありますか？ <span class="text-red-500">*</span></label>
+                        <select id="design" name="design" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            <option value="">選択してください</option>
+                            <option value="none">経験はない</option>
+                            <option value="less-than-1">1年未満だが経験はある</option>
+                            <option value="1-3">1〜3年の経験がある</option>
+                            <option value="3-5">3〜5年の経験がある</option>
+                            <option value="5+">5年以上の経験がある</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="residence" class="block text-sm font-medium text-gray-700 mb-1">北海道もしくは岩手に住んだことがありますか？</label>
+                        <select id="residence" name="residence" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option value="">選択してください</option>
+                            <option value="hokkaido">北海道に住んだことがある</option>
+                            <option value="iwate">岩手に住んだことがある</option>
+                            <option value="both">両方に住んだことがある</option>
+                            <option value="none">住んだことはない</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">メッセージ <span class="text-gray-500">(任意)</span></label>
+                        <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                    </div>
+
+                    <div class="bg-yellow-50 p-4 rounded-md mb-6">
+                        <p class="text-yellow-800 text-sm">※SES企業などの業者の募集はお断りさせていただいております。</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="submit" class="bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-600 transition duration-300">送信する</button>
+                    </div>
+                </form>
+                
+                <div class="mt-12 text-center text-gray-600">
+                    <p>メールでのお問い合わせ：<a href="mailto:info@e-fronpeer.com" class="text-blue-700">info@e-fronpeer.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap">
+                <div class="w-full md:w-1/3 mb-8 md:mb-0">
+                    <h3 class="text-xl font-bold mb-6">Eフロンピア合同会社</h3>
+                    <p class="mb-4 text-gray-400">北海道から世界へ、共に拓くいいフロンティア</p>
+                    <p class="text-gray-400">創業：2023年11月26日</p>
+                </div>
+                
+                <div class="w-full md:w-1/3 mb-8 md:mb-0">
+                    <h4 class="text-lg font-bold mb-6">サービス</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#services" class="text-gray-400 hover:text-white">AIアプリケーション開発</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white">マーケティングツール構築</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white">ソフトウェア開発</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white">プログラミング教育</a></li>
+                    </ul>
+                </div>
+                
+                <div class="w-full md:w-1/3">
+                    <h4 class="text-lg font-bold mb-6">リンク</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#about" class="text-gray-400 hover:text-white">会社紹介</a></li>
+                        <li><a href="#tech" class="text-gray-400 hover:text-white">技術スタック</a></li>
+                        <li><a href="#contribution" class="text-gray-400 hover:text-white">社会貢献活動</a></li>
+                        <li><a href="#recruitment" class="text-gray-400 hover:text-white">エンジニア募集</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">お問い合わせ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-10 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2023-2024 Eフロンピア合同会社 All Rights Reserved.</p>
+                <p class="text-gray-400 mt-2">
+                    <a href="https://corp.e-fronpeer.com/" target="_blank" class="hover:text-white">https://corp.e-fronpeer.com</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // シンプルなスムーススクロール機能
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script src="js/form.js"></script>
+</body>
+</html>
+
