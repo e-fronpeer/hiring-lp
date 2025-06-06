@@ -78,7 +78,7 @@ async function submitForm(event) {
 
 // フォームのバリデーション
 function validateForm(formData) {
-    const requiredFields = ['name', 'email', 'hours', 'nextjs', 'python', 'frontend', 'backend', 'design'];
+    const requiredFields = ['name', 'email', 'hours', 'frontend', 'backend'];
     
     for (const field of requiredFields) {
         if (!formData.get(field)) {
